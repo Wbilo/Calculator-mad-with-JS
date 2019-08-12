@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Min Lommeregner</title>
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8">
+	
+</head>
+
+
+<body>
+     
+     <div class="lommeregner">  
+        <input class="DisplayInput" type="text" id="input" placeholder="0" readonly autocomplete="off"> 
+        <!-- autocomplete="off" forhindrer browseren i at gemme tekstfeltets værdi når man refresher siden --> 
+        <!-- disabled gør at elementet er deaktiveret --> 
+        <br>
+        <input class="DisplayAnswer" type="text" id="resultatet" readonly autocomplete="off">
+        <br> 
+		
+		<input class="knap" type="button" value="CE"  onclick="rydIndhold()" autocomplete="off">
+		<input class="knap" type="button" value=" C "  onclick="sletChar()" autocomplete="off">
+		<input id="operandSIN" class="knap" type="button" value=" SIN " onclick="hentTegn('SIN'); aktiverKnap()" autocomplete="off">
+		<input id="operandCOS" class="knap" type="button" value=" COS " onclick="hentTegn('COS'); aktiverKnap()" autocomplete="off">
+		
+		<input id="operandPLUS" class="knap" type="button" value="+" onclick=" hentTegn('+'); deaktiverKnap()" disabled autocomplete="off">
+		<br> 
+		<input id="operandLog" class="knap" type="button" value=" Log " onclick="hentTegn('Log'); aktiverKnap()" autocomplete="off">
+		<input class="knap" type="button" value=" 7 "  onclick="hentNummer(7); aktiverKnap()" autocomplete="off">
+		<input class="knap" type="button" value=" 8 "  onclick="hentNummer(8); aktiverKnap()" autocomplete="off">
+		<input class="knap" type="button" value=" 9 " onclick="hentNummer(9); aktiverKnap()" autocomplete="off">
+		<input id="operandMinus" class="knap" type="button" value=" - "  onclick=" hentTegn('-'); deaktiverKnap()" autocomplete="off">
+		<br> 
+		<input id="operandMod" class="knap" type="button" value=" Mod " onclick="hentTegn('mod'); deaktiverKnap()" disabled autocomplete="off">
+		<input class="knap" type="button" value=" 4 "  onclick="hentNummer(4); aktiverKnap()" autocomplete="off">
+		<input class="knap" type="button" value=" 5 "  onclick="hentNummer(5); aktiverKnap()" autocomplete="off">
+		<input class="knap" type="button" value=" 6 "onclick="hentNummer(6); aktiverKnap()" autocomplete="off">
+		<input id="operandGange" class="knap" type="button" value=" * " onclick="hentTegn('*'); deaktiverKnap()" disabled autocomplete="off">
+		<br> 
+		
+		<input id="operandSQRT" class="knap" type="button" value=" &radic; " onclick="hentTegn('sqrt'); aktiverKnap()" autocomplete="off">
+		<input class="knap" type="button" value=" 1 "  onclick="hentNummer(1); aktiverKnap()" autocomplete="off">
+		<input class="knap" type="button" value=" 2 "  onclick="hentNummer(2); aktiverKnap()" autocomplete="off">
+		<input class="knap" type="button" value=" 3 "  onclick="hentNummer(3); aktiverKnap()" autocomplete="off">
+		<input id="operandDividere" class="knap" type="button" value=" ÷ "  onclick=" hentTegn('/'); deaktiverKnap()" disabled autocomplete="off">
+		<br> 
+		<input class="knap" type="button" value=" ( "  onclick="hentTegn('('); aktiverKnap()" autocomplete="off">
+		<input class="knap" type="button" value=" ) "  onclick=" hentTegn(')'); aktiverKnap()" autocomplete="off">
+		<input class="knap" type="button" value=" 0 "  onclick=" hentNummer(0); aktiverKnap()" autocomplete="off">
+		<input id="operandPunktum" class="knap" type="button" value=" . "  onclick="hentTegn('.')" autocomplete="off">
+		<input class="knap" type="button" value=" π "  onclick="hentTegn('pi'); aktiverKnap()" autocomplete="off">
+		<input class="knapLigmed" type="button" value=" = "  onclick="udregn()" autocomplete="off">
+		<h1 class="navn">W.B Lommeregner</h1> 
+	</div> 	
+
+</body>
+
+</html>
